@@ -41,9 +41,14 @@ export const Navbar = () => {
             alt=""
           />
         </Link>
-        <div className="space-x-4 px-6 py-3 lg:p-4 text-orange-500 hidden md:flex items-center">
+        <div className="space-x-4 px-6 py-3 lg:p-4  hidden md:flex items-center">
           {navLinks.map((link) => (
-            <Link href={link.href} children={link.name} key={link.name} />
+            <Link
+              className="text-orange-500 hover:text-orange-700 transition text-xl"
+              href={link.href}
+              children={link.name}
+              key={link.name}
+            />
           ))}
         </div>
         <RxHamburgerMenu

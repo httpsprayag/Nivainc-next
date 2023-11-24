@@ -1,28 +1,29 @@
 import { Fragment } from "react";
-import { Heading, Counting } from "@/components";
+import { Heading, Counting, ImageCarousel } from "@/components";
 import { countingData, landingImages, products } from "@/constants";
-import Link from "next/link";
 import { ImCircleRight } from "react-icons/im";
 import { MdProductionQuantityLimits } from "react-icons/md";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <>
       {/* hero banner */}
-      <div className="bg-black  md:h-[450px] lg:h-[550px] md:container md:mx-auto">
+      {/* <div className="bg-black  md:h-[450px] lg:h-[550px] md:container md:mx-auto">
         <img
           className="w-full h-full object-cover"
           src="assets/images/hero-bg-1.jpg"
           alt=""
         />
-      </div>
+      </div> */}
+      <ImageCarousel />
       {/* landing  page */}
       <section className="mt-8 md:px-8  px-4 text-justify py-6">
         <div className=" grid md:flex gap-3 md:justify-center lg:container lg:p-0 mx-auto">
           <div className="grid  md:place-items-center">
             <div className="flex flex-col gap-3 md:max-w-md sm:pr-4">
               <div className="flex items-center gap-2">
-                <ImCircleRight className="text-xl text-cyan-600" />
+                <ImCircleRight className="text-xl text-orange-500 text-3xl" />
                 <Heading>Leading the way</Heading>
               </div>
               <p className="text-lg md:text-xl font-bold text-gray-400">
@@ -58,7 +59,7 @@ export default function Home() {
 
       <section className="mt-8 md:px-8  px-4 text-justify py-6">
         <div className="mt- md:container md:justify-center md:mx-auto flex items-center gap-3">
-          <MdProductionQuantityLimits className="text-fuchsia-400 text-xl" />
+          <MdProductionQuantityLimits className="text-orange-500 text-3xl" />
           <Heading isCenter>Product Portfolio</Heading>
         </div>
         <div className="mt-8 grid gap-4 md:max-w-5xl md:mx-auto grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">

@@ -33,14 +33,22 @@ const ContactUsPage = () => {
   });
   return (
     <div className="mt-8 px-4 pb-4">
-      <div className="flex items-center gap-3 md:justify-center">
-        <ImCircleRight className="text-xl text-cyan-600" />
-        <Heading isCenter>Contact Us</Heading>
+      <div className="flex flex-col items-center gap-3 md:justify-center">
+        <div className="flex items-center gap-3">
+          <ImCircleRight className="text-xl text-orange-400" />
+          <Heading isCenter>Contact Us</Heading>
+        </div>
+        <p className="max-w-3xl mx-auto">
+          We would be most delighted to answer any of your questions or queries,
+          thus feel free to contact us anytime! What is more, you can visit our
+          showroom during our operating hours to check our products and have a
+          chat with our representatives, or even schedule an appointmen
+        </p>
       </div>
       <div className="mt-7 md:mt-[70px] flex md:max-w-3xl border border-orange-400 rounded-lg lg:max-w-4xl mx-auto px-4 md:p-0 relative">
         <form
           onSubmit={formik.handleSubmit}
-          className="bg-gray-950 bg-opacity-80 p-8 rounded-lg shadow-md w-full md:pr-40 lg:pr-36"
+          className="bg-gray-950 bg-opacity-80 p-8 rounded-l-lg shadow-md w-full md:pr-40 lg:pr-36"
         >
           <div className="mb-4">
             <div className="text-3xl py-3 flex items-center gap-2">

@@ -8,10 +8,10 @@ export const Counting = ({ count, text, icon }) => {
         {icon}
       </div>
       <div className="flex items-center gap-1 text-2xl">
-        <CountUp end={count} className="text-2xl text-cyan-300" />
-        <span className="text-cyan-300">+</span>
+        <CountUp end={count} className="text-2xl text-orange-500" />
+        <span className="text-orange-500">+</span>
       </div>
-      <p className="text-xl text-center text-cyan-300">{text}</p>
+      <p className="text-xl text-center text-black">{text}</p>
     </div>
   );
 };

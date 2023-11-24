@@ -107,14 +107,14 @@ const AboutUs = () => {
         </ul>
       </section>
       <section className="mt-8 p-4">
-        <div className="md:max-w-4xl md:mx-auto mt-8 grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+        <div className="md:max-w-5xl md:mx-auto mt-8 grid gap-16 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
           {/* Mission Card */}
-          <div className="bg-transparent border text-fuchsia-500 border-fuchsia-600 p-4 rounded-lg shadow-md">
+          <div className="bg-transparent border text-orange-500 border-orange-600 p-4 rounded-lg shadow-xl shadow-orange-200">
             <div className="flex items-center gap-2">
-              <GiTargetArrows className="text-fuchsia-600 text-2xl" />
+              <GiTargetArrows className="text-orange-600 text-2xl" />
               <h2 className="text-xl font-semibold">Mission</h2>
             </div>
-            <p className="text-sm mt-2 text-cyan-300">
+            <p className="text-sm mt-2 text-black">
               At NIVA Inc, our mission is to redefine the way the world
               experiences spaces. We are dedicated to providing innovative,
               high-quality ceramic and porcelain tiles.
@@ -122,12 +122,14 @@ const AboutUs = () => {
           </div>
 
           {/* Vision Card */}
-          <div className="bg-transparent border-green-600 text-green-500 border p-4 rounded-lg shadow-md">
+          <div
+            className="bg-transparent border text-orange-500 border-orange-600 p-4 shadow-orange-200 rounded-lg shadow-xl"
+          >
             <div className="flex items-center gap-2">
-              <AiFillEye className="text-green-500 text-2xl" />
+              <AiFillEye className="text-orange-500 text-2xl" />
               <h2 className="text-xl font-semibold">Vision</h2>
             </div>
-            <p className="text-sm mt-2 text-cyan-300">
+            <p className="text-sm mt-2 text-black">
               We strive to inspire creativity and transform spaces by providing
               a diverse range of tiles that cater to the unique needs and
               preferences of our customers worldwide.
@@ -135,12 +137,12 @@ const AboutUs = () => {
           </div>
 
           {/* Goal Card */}
-          <div className="border text-yellow-500 border-yellow-500 p-4 rounded-lg shadow-md">
+          <div className="border  text-orange-500 border-orange-500 p-4 rounded-lg shadow-xl shadow-orange-200">
             <div className="flex items-center gap-2">
-              <GoGoal className="text-2 xl text-yellow-500" />
+              <GoGoal className="text-2xl text-orange-500" />
               <h2 className="text-xl font-semibold">Goal</h2>
             </div>
-            <p className="text-sm mt-2 text-cyan-300">
+            <p className="text-sm mt-2 text-black">
               NIVA Inc's overarching goal is to be the undisputed leader in the
               global ceramic and porcelain tile market.
             </p>
