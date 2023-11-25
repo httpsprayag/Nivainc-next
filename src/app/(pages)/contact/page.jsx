@@ -35,7 +35,7 @@ const ContactUsPage = () => {
     <div className="mt-8 px-4 pb-4">
       <div className="flex flex-col items-center gap-3 md:justify-center">
         <div className="flex items-center gap-3">
-          <ImCircleRight className="text-xl text-orange-400" />
+          <ImCircleRight className="text-xl text-blue-400" />
           <Heading isCenter>Contact Us</Heading>
         </div>
         <p className="max-w-3xl mx-auto">
@@ -45,7 +45,7 @@ const ContactUsPage = () => {
           chat with our representatives, or even schedule an appointmen
         </p>
       </div>
-      <div className="mt-7 md:mt-[70px] flex md:max-w-3xl border border-orange-400 rounded-lg lg:max-w-4xl mx-auto px-4 md:p-0 relative">
+      <div className="mt-7 md:mt-[70px] flex md:max-w-3xl border border-blue-400 rounded-lg lg:max-w-4xl mx-auto px-4 md:p-0 relative">
         <form
           onSubmit={formik.handleSubmit}
           className="bg-gray-950 bg-opacity-80 p-8 rounded-l-lg shadow-md w-full md:pr-40 lg:pr-36"
@@ -53,9 +53,9 @@ const ContactUsPage = () => {
           <div className="mb-4">
             <div className="text-3xl py-3 flex items-center gap-2">
               <p className="text-white ">Get In Touch</p>
-              <FcContacts className="text-orange-400" />
+              <FcContacts className="text-blue-400" />
             </div>
-            <label htmlFor="name" className="text-orange-400 block mb-2">
+            <label htmlFor="name" className="text-blue-400 block mb-2">
               Name
             </label>
             <input
@@ -65,7 +65,7 @@ const ContactUsPage = () => {
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               value={formik.values.name}
-              className="w-full px-3 py-2 border duration-200 border-gray-700 rounded bg-gray-900 text-white focus:outline-none focus:border-orange-400"
+              className="w-full px-3 py-2 border duration-200 border-gray-700 rounded bg-gray-900 text-white focus:outline-none focus:border-blue-400"
             />
             {formik.touched.name && formik.errors.name && (
               <div className="text-red-500 mt-2">{formik.errors.name}</div>
@@ -75,7 +75,7 @@ const ContactUsPage = () => {
           <div className="mb-4">
             <label
               htmlFor="contactNumber"
-              className="text-orange-400 block mb-2"
+              className="text-blue-400 block mb-2"
             >
               Contact Number
             </label>
@@ -86,7 +86,7 @@ const ContactUsPage = () => {
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               value={formik.values.contactNumber}
-              className="w-full px-3 py-2 duration-200 border border-gray-700 rounded bg-gray-900 text-white focus:outline-none focus:border-orange-400"
+              className="w-full px-3 py-2 duration-200 border border-gray-700 rounded bg-gray-900 text-white focus:outline-none focus:border-blue-400"
             />
             {formik.touched.contactNumber && formik.errors.contactNumber && (
               <div className="text-red-500 mt-2">
@@ -96,7 +96,7 @@ const ContactUsPage = () => {
           </div>
 
           <div className="mb-4">
-            <label htmlFor="email" className="text-orange-400 block mb-2">
+            <label htmlFor="email" className="text-blue-400 block mb-2">
               Email
             </label>
             <input
@@ -106,7 +106,7 @@ const ContactUsPage = () => {
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               value={formik.values.email}
-              className="w-full px-3 py-2 border border-gray-700 rounded bg-gray-900 text-white focus:outline-none focus:border-orange-400"
+              className="w-full px-3 py-2 border border-gray-700 rounded bg-gray-900 text-white focus:outline-none focus:border-blue-400"
             />
             {formik.touched.email && formik.errors.email && (
               <div className="text-red-500 mt-2">{formik.errors.email}</div>
@@ -114,7 +114,7 @@ const ContactUsPage = () => {
           </div>
 
           <div className="mb-4">
-            <label htmlFor="query" className="text-orange-400 block mb-2">
+            <label htmlFor="query" className="text-blue-400 block mb-2">
               Query
             </label>
             <textarea
@@ -123,7 +123,7 @@ const ContactUsPage = () => {
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               value={formik.values.query}
-              className="w-full px-3 py-2 border border-gray-700 rounded bg-gray-900 text-white focus:outline-none focus:border-orange-400"
+              className="w-full px-3 py-2 border border-gray-700 rounded bg-gray-900 text-white focus:outline-none focus:border-blue-400"
             />
             {formik.touched.query && formik.errors.query && (
               <div className="text-red-500 mt-2">{formik.errors.query}</div>
@@ -132,20 +132,20 @@ const ContactUsPage = () => {
 
           <button
             type="submit"
-            className="border h-12 w-32 duration-200 hover:text-black border-orange-400 text-orange-500 hover:bg-orange-400 px-4 py-2 rounded focus:outline-none focus:shadow-outline-orange"
+            className="border h-12 w-32 duration-200 hover:text-black border-blue-400 text-blue-500 hover:bg-blue-400 px-4 py-2 rounded focus:outline-none focus:shadow-outline-blue"
             disabled={formik.isSubmitting}
           >
             {formik.isSubmitting ? (
               <ProgressSpinner
-                color="orange"
-                className="h-full text-orange-400"
+                color="blue"
+                className="h-full text-blue-400"
               />
             ) : (
               "Submit"
             )}
           </button>
         </form>
-        <div className="w-2/5 bg-orange-400 hidden md:block rounded-r-lg"></div>
+        <div className="w-2/5 bg-blue-400 hidden md:block rounded-r-lg"></div>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1038075.7105361769!2d-93.48650886938557!3d60.97321408042491!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1699804356173!5m2!1sen!2sin"
           width="600"

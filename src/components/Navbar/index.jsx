@@ -36,15 +36,15 @@ export const Navbar = () => {
       <div className="container mx-auto flex-row-reverse md:flex-row flex justify-between items-center px-5 md:px-10">
         <Link href="/">
           <img
-            src="assets/icons/logo.png"
-            className="w-20 outline-none h-10 object-cover"
+            src="assets/icons/logo.svg"
+            className="w-20 h-14 md:w-32 md:h-20 border-none outline-none object-cover"
             alt=""
           />
         </Link>
         <div className="space-x-4 px-6 py-3 lg:p-4  hidden md:flex items-center">
           {navLinks.map((link) => (
             <Link
-              className="text-orange-500 hover:text-orange-700 transition text-xl"
+              className="text-blue-500 hover:text-blue-700 transition text-xl"
               href={link.href}
               children={link.name}
               key={link.name}
@@ -52,7 +52,7 @@ export const Navbar = () => {
           ))}
         </div>
         <RxHamburgerMenu
-          className="text-2xl cursor-pointer md:hidden text-orange-400"
+          className="text-2xl cursor-pointer md:hidden text-blue-400"
           onClick={() => setIsOpen(!isOpen)}
         />
       </div>
@@ -61,13 +61,13 @@ export const Navbar = () => {
         visible={isOpen}
         onHide={() => setIsOpen(false)}
         closeIcon={
-          <MdClose className="text-2xl text-orange-400 m-5 outline-none border-none" />
+          <MdClose className="text-2xl text-blue-400 m-5 outline-none border-none" />
         }
       >
         <div className="grid gap-4 mt-5">
           {navLinks?.map((linkItem, id) => (
             <Link
-              className="text-center text-orange-400 text-xl"
+              className="text-center text-blue-400 text-xl"
               key={id}
               href={linkItem?.href}
               onClick={() => setIsOpen(false)}

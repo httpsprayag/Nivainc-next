@@ -23,7 +23,7 @@ export default function Home() {
           <div className="grid  md:place-items-center">
             <div className="flex flex-col gap-3 md:max-w-md sm:pr-4">
               <div className="flex items-center gap-2">
-                <ImCircleRight className="text-xl text-orange-500 text-3xl" />
+                <ImCircleRight className="text-xl text-blue-500 text-3xl" />
                 <Heading>Leading the way</Heading>
               </div>
               <p className="text-lg md:text-xl font-bold text-gray-400">
@@ -59,7 +59,7 @@ export default function Home() {
 
       <section className="mt-8 md:px-8  px-4 text-justify py-6">
         <div className="mt- md:container md:justify-center md:mx-auto flex items-center gap-3">
-          <MdProductionQuantityLimits className="text-orange-500 text-3xl" />
+          <MdProductionQuantityLimits className="text-blue-500 text-3xl" />
           <Heading isCenter>Product Portfolio</Heading>
         </div>
         <div className="mt-8 grid gap-4 md:max-w-5xl md:mx-auto grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
@@ -83,7 +83,7 @@ export default function Home() {
         </div>
       </section>
       <section className="mt-8">
-        <div className="py-12 flex items-center gap-4 md:gap-12 justify-center">
+        <div className="pt-0 pb-6 md:py-12 flex items-center gap-4 md:gap-12 justify-center">
           {countingData?.map((item, id) => (
             <Counting
               key={id}

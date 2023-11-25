@@ -12,9 +12,9 @@ export const BlogCard = ({ blogImage, title, text, date }) => {
         <h2 className="text-2xl font-bold text-black mb-2">{title}</h2>
         <p className="text-black">{text}</p>
       </div>
-      <div className="flex justify-between items-center p-4 bg-orange-500">
-        <p className="text-white">{date}</p>
-        <button className="bg-orange-400 text-white px-4 py-2 rounded-md">
+      <div className="flex justify-between items-center p-4 ">
+        <p className="text-gray-600">{date}</p>
+        <button className="text-blue-500 border border-blue-400 hover:bg-blue-400 hover:text-white transition px-4 py-2 rounded-md">
           Read More
         </button>
       </div>

@@ -26,7 +26,7 @@ const AboutUs = () => {
                 <Heading>Leading the way</Heading>
               </div>
             </div>
-            <p className="text-2xl mt-5 text-orange-500">
+            <p className="text-2xl mt-5 text-blue-500">
               Let’s build a better world together
             </p>
             <p className="mt-5">
@@ -63,42 +63,42 @@ const AboutUs = () => {
         </div>
         <ul className="list-disc list-inside mt-4 space-y-2">
           <li className="flex gap-2 items-center space-x-2">
-            <span className="min-w-[30px] min-h-[30px] rounded-[50%]  py-2 w-fit bg-orange-500 flex items-start md:items-center justify-center text-white font-bold">
+            <span className="min-w-[30px] min-h-[30px] rounded-[50%]  py-2 w-fit bg-blue-500 flex items-start md:items-center justify-center text-white font-bold">
               1
             </span>
             Discover Our Range: Explore our diverse ceramic and porcelain tile
             collection designed to elevate your spaces.
           </li>
           <li className="flex gap-2 items-center space-x-2">
-            <span className="min-w-[30px] min-h-[30px] rounded-[50%]  py-2 w-fit bg-orange-500 flex items-start md:items-center justify-center text-white font-bold">
+            <span className="min-w-[30px] min-h-[30px] rounded-[50%]  py-2 w-fit bg-blue-500 flex items-start md:items-center justify-center text-white font-bold">
               2
             </span>
             Personalized Assistance: Our expert team is ready to assist,
             offering personalized guidance to meet your project needs.
           </li>
           <li className="flex gap-2 items-center space-x-2">
-            <span className="min-w-[30px] min-h-[30px] rounded-[50%]  py-2 w-fit bg-orange-500 flex items-start md:items-center justify-center text-white font-bold">
+            <span className="min-w-[30px] min-h-[30px] rounded-[50%]  py-2 w-fit bg-blue-500 flex items-start md:items-center justify-center text-white font-bold">
               3
             </span>
             Transparent Ordering: Navigate our user-friendly ordering process
             with transparency and ease.
           </li>
           <li className="flex gap-2 items-center space-x-2">
-            <span className="min-w-[30px] min-h-[30px] rounded-[50%]  py-2 w-fit bg-orange-500 flex items-start md:items-center justify-center text-white font-bold">
+            <span className="min-w-[30px] min-h-[30px] rounded-[50%]  py-2 w-fit bg-blue-500 flex items-start md:items-center justify-center text-white font-bold">
               4
             </span>
             Swift Export Services: Experience efficient and secure tile exports
             with NIVA Inc.
           </li>
           <li className="flex gap-2 items-center space-x-2">
-            <span className="min-w-[30px] min-h-[30px] rounded-[50%]  py-2 w-fit bg-orange-500 flex items-start md:items-center justify-center text-white font-bold">
+            <span className="min-w-[30px] min-h-[30px] rounded-[50%]  py-2 w-fit bg-blue-500 flex items-start md:items-center justify-center text-white font-bold">
               5
             </span>
             Constant Communication: Stay informed with regular updates and
             responsive communication.
           </li>
           <li className="flex gap-2 items-center space-x-2">
-            <span className="min-w-[30px] min-h-[30px] rounded-[50%]  py-2 w-fit bg-orange-500 flex items-start md:items-center justify-center text-white font-bold">
+            <span className="min-w-[30px] min-h-[30px] rounded-[50%]  py-2 w-fit bg-blue-500 flex items-start md:items-center justify-center text-white font-bold">
               6
             </span>
             Quality Assurance: Expect top-notch quality as we deliver tiles that
@@ -109,9 +109,9 @@ const AboutUs = () => {
       <section className="mt-8 p-4">
         <div className="md:max-w-5xl md:mx-auto mt-8 grid gap-16 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
           {/* Mission Card */}
-          <div className="bg-transparent border text-orange-500 border-orange-600 p-4 rounded-lg shadow-xl shadow-orange-200">
+          <div className="bg-transparent border text-blue-500 border-blue-600 p-4 rounded-lg shadow-xl shadow-blue-200">
             <div className="flex items-center gap-2">
-              <GiTargetArrows className="text-orange-600 text-2xl" />
+              <GiTargetArrows className="text-blue-600 text-2xl" />
               <h2 className="text-xl font-semibold">Mission</h2>
             </div>
             <p className="text-sm mt-2 text-black">
@@ -123,10 +123,10 @@ const AboutUs = () => {
 
           {/* Vision Card */}
           <div
-            className="bg-transparent border text-orange-500 border-orange-600 p-4 shadow-orange-200 rounded-lg shadow-xl"
+            className="bg-transparent border text-blue-500 border-blue-600 p-4 shadow-blue-200 rounded-lg shadow-xl"
           >
             <div className="flex items-center gap-2">
-              <AiFillEye className="text-orange-500 text-2xl" />
+              <AiFillEye className="text-blue-500 text-2xl" />
               <h2 className="text-xl font-semibold">Vision</h2>
             </div>
             <p className="text-sm mt-2 text-black">
@@ -137,9 +137,9 @@ const AboutUs = () => {
           </div>
 
           {/* Goal Card */}
-          <div className="border  text-orange-500 border-orange-500 p-4 rounded-lg shadow-xl shadow-orange-200">
+          <div className="border  text-blue-500 border-blue-500 p-4 rounded-lg shadow-xl shadow-blue-200">
             <div className="flex items-center gap-2">
-              <GoGoal className="text-2xl text-orange-500" />
+              <GoGoal className="text-2xl text-blue-500" />
               <h2 className="text-xl font-semibold">Goal</h2>
             </div>
             <p className="text-sm mt-2 text-black">

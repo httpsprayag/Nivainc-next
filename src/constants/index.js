@@ -56,17 +56,17 @@ export const countingData = [
   {
     title: "Designs",
     count: 1000,
-    icon: <MdSpaceDashboard className="text-orange-400" />,
+    icon: <MdSpaceDashboard className="text-blue-400" />,
   },
   {
     title: "Clients",
     count: 200,
-    icon: <MdProductionQuantityLimits className="text-orange-400" />,
+    icon: <MdProductionQuantityLimits className="text-blue-400" />,
   },
   {
     title: "Countries",
     count: 50,
-    icon: <MdPersonAdd className="text-orange-400" />,
+    icon: <MdPersonAdd className="text-blue-400" />,
   },
 ];
 
