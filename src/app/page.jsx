@@ -8,22 +8,14 @@ import Link from "next/link";
 export default function Home() {
   return (
     <>
-      {/* hero banner */}
-      {/* <div className="bg-black  md:h-[450px] lg:h-[550px] md:container md:mx-auto">
-        <img
-          className="w-full h-full object-cover"
-          src="assets/images/hero-bg-1.jpg"
-          alt=""
-        />
-      </div> */}
       <ImageCarousel />
       {/* landing  page */}
       <section className="mt-8 md:px-8  px-4 text-justify py-6">
-        <div className=" grid md:flex gap-3 md:justify-center lg:container lg:p-0 mx-auto">
+        <div className=" grid md:flex gap-3 md:justify-center lg:container lg:p-0 mx-auto text-lg md:text-xl">
           <div className="grid  md:place-items-center">
             <div className="flex flex-col gap-3 md:max-w-md sm:pr-4">
               <div className="flex items-center gap-2">
-                <ImCircleRight className="text-xl text-blue-500 text-3xl" />
+                <ImCircleRight className="text-blue-500 text-3xl" />
                 <Heading>Leading the way</Heading>
               </div>
               <p className="text-lg md:text-xl font-bold text-gray-400">

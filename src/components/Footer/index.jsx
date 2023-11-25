@@ -9,6 +9,7 @@ import {
   FaWhatsapp,
   FaFacebook,
 } from "react-icons/fa";
+import { GoLocation } from "react-icons/go";
 import { MdOutlineEmail } from "react-icons/md";
 
 export const Footer = () => {
@@ -19,29 +20,21 @@ export const Footer = () => {
           <h1 className="text-lg font-semibold mb-2 text-blue-500">
             Quick Links
           </h1>
-          <Link href="/">
-            <p className="flex items-center mb-2 ">
-              <FaHome className="inline mr-2 text-blue-500 text-2xl" />
-              Home
-            </p>
+          <Link href="/" className="flex items-start gap-3 py-1">
+            <FaHome className="inline text-blue-500 text-2xl" />
+            <p className="flex items-center">Home</p>
           </Link>
-          <Link href="/about-us">
-            <p className="flex items-center mb-2 ">
-              <FaInfoCircle className="inline mr-2 text-blue-500  text-2xl mt-2" />
-              About
-            </p>
+          <Link href="/about-us" className="flex items-start gap-3 py-1">
+            <FaInfoCircle className="inline text-blue-500  text-2xl" />
+            <p className="flex items-center">About</p>
           </Link>
-          <Link href="/services">
-            <p className="flex items-center mb-2">
-              <FaCogs className="inline mr-2 text-blue-500  text-2xl mt-2" />
-              Services
-            </p>
+          <Link href="/services" className="flex items-start gap-3 py-1">
+            <FaCogs className="inline text-blue-500  text-2xl" />
+            <p className="flex items-center">Services</p>
           </Link>
-          <Link href="/contact">
-            <p className="flex items-center ">
-              <FaPhone className="inline mr-2 text-blue-500  text-2xl mt-2" />
-              Contact
-            </p>
+          <Link href="/contact" className="flex items-start gap-3 py-1">
+            <FaPhone className="inline text-blue-500  text-2xl" />
+            <p className="flex items-center ">Contact</p>
           </Link>
         </div>
         <div>
@@ -69,12 +62,17 @@ export const Footer = () => {
           <h1 className="text-lg font-semibold mb-2 text-blue-500">
             Contact Information
           </h1>
-          <p>
-            Corporate Office: Office No 39, Akshar Business center Morbi,
-            Gujarat-363642
-          </p>
-          <p className="mt-3">Factory: At Shapar, Jetpar Rd, Morbi, Gujarat-363642</p>
-          <p className="mt-3">Phone: India +91-9537526707, +91-7859916418 USA +1-9452686122</p>
+          <div className="flex items-start gap-4">
+            <GoLocation className="text-blue-400 mt-2 text-2xl" />
+            <p>Office No 39, Akshar Business center Morbi, Gujarat-363642</p>
+          </div>
+          <div className="mt-3 flex items-start gap-4">
+            <FaPhone className="text-blue-400 mt-2" />
+            <div>
+              <p className="text-sm">India: +91-9537526707, +91-7859916418 </p>
+              <p className="text-sm">USA: +1-9452686122</p>
+            </div>
+          </div>
           <div className="mt-3 flex items-center gap-2">
             <MdOutlineEmail className="text-blue-500 text-2xl" />
             <p>Export@nivainc.com</p>

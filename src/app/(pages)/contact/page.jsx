@@ -6,6 +6,7 @@ import { Heading } from "@/components";
 import { FcContacts } from "react-icons/fc";
 import * as Yup from "yup";
 import { ImCircleRight } from "react-icons/im";
+import { MdContactPage } from "react-icons/md";
 
 const ContactUsPage = () => {
   const formik = useFormik({
@@ -32,28 +33,27 @@ const ContactUsPage = () => {
     },
   });
   return (
-    <div className="mt-8 px-4 pb-4">
+    <div className="mt-8 px-4 md:px-0 pb-4">
       <div className="flex flex-col items-center gap-3 md:justify-center">
-        <div className="flex items-center gap-3">
-          <ImCircleRight className="text-xl text-blue-400" />
+        <div className="flex items-center gap-3 text-blue-500">
+          <MdContactPage className="text-3xl text-blue-400" />
           <Heading isCenter>Contact Us</Heading>
         </div>
-        <p className="max-w-3xl mx-auto">
+        <p className="max-w-3xl mx-auto px-4 text-lg md:text-2xl text-gray-500">
           We would be most delighted to answer any of your questions or queries,
           thus feel free to contact us anytime! What is more, you can visit our
           showroom during our operating hours to check our products and have a
           chat with our representatives, or even schedule an appointmen
         </p>
       </div>
-      <div className="mt-7 md:mt-[70px] flex md:max-w-3xl border border-blue-400 rounded-lg lg:max-w-4xl mx-auto px-4 md:p-0 relative">
+      <div className="mt-7 md:mt-[70px] flex md:max-w-3xl border border-blue-400 rounded-lg lg:max-w-4xl mx-auto relative">
         <form
           onSubmit={formik.handleSubmit}
           className="bg-gray-950 bg-opacity-80 p-8 rounded-l-lg shadow-md w-full md:pr-40 lg:pr-36"
         >
           <div className="mb-4">
             <div className="text-3xl py-3 flex items-center gap-2">
-              <p className="text-white ">Get In Touch</p>
-              <FcContacts className="text-blue-400" />
+              <p className="text-blue-300">Get In Touch</p>
             </div>
             <label htmlFor="name" className="text-blue-400 block mb-2">
               Name
@@ -73,10 +73,7 @@ const ContactUsPage = () => {
           </div>
 
           <div className="mb-4">
-            <label
-              htmlFor="contactNumber"
-              className="text-blue-400 block mb-2"
-            >
+            <label htmlFor="contactNumber" className="text-blue-400 block mb-2">
               Contact Number
             </label>
             <input
@@ -136,10 +133,7 @@ const ContactUsPage = () => {
             disabled={formik.isSubmitting}
           >
             {formik.isSubmitting ? (
-              <ProgressSpinner
-                color="blue"
-                className="h-full text-blue-400"
-              />
+              <ProgressSpinner color="blue" className="h-full text-blue-400" />
             ) : (
               "Submit"
             )}

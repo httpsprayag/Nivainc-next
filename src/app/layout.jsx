@@ -12,7 +12,7 @@ export const metadata = {
 const RootLayout = ({ children }) => {
   return (
     <html lang="en">
-      <body className="font-serif">
+      <body className="font-merriweather">
         <Navbar />
         {children}
         <Footer />
