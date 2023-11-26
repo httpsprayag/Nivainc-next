@@ -63,8 +63,12 @@ export const Footer = () => {
             Contact Information
           </h1>
           <div className="flex items-start gap-4">
-            <GoLocation className="text-blue-400 mt-2 text-2xl" />
-            <p>Office No 39, Akshar Business center Morbi, Gujarat-363642</p>
+            <GoLocation className="text-blue-400 mt-2 text-5xl" />
+            <p>
+              Corporate Office: Akshar Business Center N/H 8A Morbi, Gujarat
+              363642 Factory Address: At. Shapar, Jetpar Rd, Morbi, Gujarat
+              363642
+            </p>
           </div>
           <div className="mt-3 flex items-start gap-4">
             <FaPhone className="text-blue-400 mt-2" />

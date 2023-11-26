@@ -36,7 +36,7 @@ export const Navbar = () => {
       <div className="container mx-auto flex-row-reverse md:flex-row flex justify-between items-center px-5 md:px-10">
         <Link href="/">
           <img
-            src="assets/icons/logo.svg"
+            src="/assets/icons/logo.svg"
             className="w-20 h-14 md:w-32 md:h-20 border-none outline-none object-cover"
             alt=""
           />

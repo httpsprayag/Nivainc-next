@@ -1,47 +1,83 @@
+"use client"
 import Link from "next/link";
 import React from "react";
-
+import { motion } from "framer-motion";
 const ProductList = [
   {
     name: "Adhesive Epoxy",
-    id: "/adhesive-epoxy",
+    url: "adhesive-epoxy",
+    img: "/assets/products/theAdhesiveaEpoxy.jpg",
   },
   {
     name: "Ceramic Tile",
-    id: "/ceramic-tile",
+    url: "ceramic-tile",
+    img: "/assets/products/ceramic-tile.jpg",
   },
   {
     name: "Counter Tops Slabs",
-    id: "/counter-tops-Slabs",
+    url: "counter-tops-Slabs",
+    img: "/assets/products/counterTopsSlabs.png",
   },
   {
     name: "Outdoor Pvers",
-    id: "/outdoor-pvers",
+    url: "outdoor-pvers",
+    img: "/assets/products/outdoorPavers.png",
   },
   {
     name: "Porcelain Tile",
-    id: "porcelain-tile",
+    url: "porcelain-tile",
+    img: "/assets/products/porcelain-tile.png",
   },
   {
     name: "Subway Tile",
-    id: "subway-tile",
+    url: "subway-tile",
+    img: "/assets/products/SubayTile.jpg",
   },
 ];
 
+const staggerVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { staggerChildren: 0.1 } },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: -20 },
+  visible: { opacity: 1, y: 0 },
+};
+
 const ProductsPage = () => {
   return (
-    <div className="h-screen">
-      <div className="mt-4">
-        <h1>Products</h1>
-        <div className="mt-4 md:container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
-          {ProductList.map((product) => {
+    <div className="pb-8">
+      <div className="mt-4 px-4 mx-auto sm:w-4/5 xl:max-w-6xl">
+        <h1 className="md:text-center text-lg md:text-2xl my-8 text-blue-500">Our Products</h1>
+        <motion.div
+          className="mt-4 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
+          variants={staggerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          {ProductList.map((product, index) => {
             return (
-              <div className="grid place-items-center p-12 border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit backdrop-blur-md lg:w-auto  lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-                <Link href={`/products/${product.id}`}>{product.name}</Link>
-              </div>
+              <motion.div
+                key={index}
+                variants={itemVariants}
+                className="relative group h-[260px] md:h-[300px]"
+                whileHover={{ scale: 1.05 }}
+              >
+                <Link href={`/products/${product.url}`} className="">
+                  <img
+                    src={product.img}
+                    className="rounded-md object-cover h-full w-[100%]"
+                    alt={product.name}
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 bg-black bg-opacity-50 group-hover:opacity-100 transition duration-300 ease-in-out">
+                    <p className="text-white text-lg font-bold">{product.name}</p>
+                  </div>
+                </Link>
+              </motion.div>
             );
           })}
-        </div>
+        </motion.div>
       </div>
     </div>
   );

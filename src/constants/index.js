@@ -17,25 +17,25 @@ export const products = [
   {
     name: "porcelain-tile",
     href: "porcelain-tile",
-    image: "assets/products/porcelain-tile.png",
+    image: "/assets/products/porcelain-tile.png",
     id: 1,
   },
   {
     name: "ceramic-tile",
     href: "ceramic-tile",
-    image: "assets/products/ceramic-tile.jpg",
+    image: "/assets/products/ceramic-tile.jpg",
     id: 1,
   },
   {
     name: "outdoor-pvers",
     href: "outdoor-pvers",
-    image: "assets/products/outdoorPavers.png",
+    image: "/assets/products/outdoorPavers.png",
     id: 1,
   },
   {
     name: "Counter Tops & Slabs",
     href: "counter-tops-Slabs",
-    image: "assets/products/counterTopsSlabs.png",
+    image: "/assets/products/counterTopsSlabs.png",
     id: 1,
   },
   {
