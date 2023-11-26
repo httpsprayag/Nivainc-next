@@ -1,6 +1,4 @@
 "use client";
-import React from "react";
-import { motion } from "framer-motion"
 const porcelineImages = [
   {
     name: "Azuvi Silver",
@@ -33,66 +31,41 @@ const porcelineImages = [
     size: "3000 x 3000",
   },
 ];
+import React from "react";
+import { motion } from "framer-motion";
+import { itemVariants, staggerVariants } from "@/constants";
 
 const PorcelainTile = () => {
-  const containerVariants = {
-    hidden: { opacity: 0, y: -50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5, ease: "easeOut", staggerChildren: 0.2 },
-    },
-  };
-
-  const tileVariants = {
-    hidden: { opacity: 0, y: -20 },
-    visible: { opacity: 1, y: 0 },
-  };
-
-  const overlayVariants = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 0.7 },
-  };
-
   return (
-    <div className="w-full pb-8 mt-20">
-      <p className="md:text-center text-xl text-blue-400 mb-14">Porcelain Tiles</p>
+    <div className="w-full pb-8 mt-6 md:mt-20">
+      <p className="md:text-center text-xl text-blue-400 mb-6 md:mb-14 px-4">Porcelain Tiles</p>
       <motion.div
-        variants={containerVariants}
+        className="grid sm:grid-cols-2 lg:grid-cols-3 lg:max-w-6xl mx-auto gap-4 px-4 lg:px-0 md:gap-10 "
+        variants={staggerVariants}
         initial="hidden"
         animate="visible"
-        className="grid sm:grid-cols-2 lg:grid-cols-3 lg:max-w-6xl mx-auto gap-4 px-4 md:px-0 md:gap-10"
       >
-        {porcelineImages?.map((img, index) => (
-          <motion.div
-            key={index}
-            className="relative group"
-            variants={tileVariants}
-            whileHover={{ scale: 1.05 }}
-          >
-            <motion.div >
-              <img
-                className="h-[250px] w-full object-cover rounded-t-lg"
-                src={img.url}
-                alt={img.name}
-              />
-              <motion.div
-                className="absolute inset-0 bg-black rounded-t-lg opacity-0"
-                variants={overlayVariants}
-                initial="hidden"
-                animate="visible"
-              >
-              </motion.div>
-                <p className="text-white text-xl absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                  {img.name}
-                </p>
-
-              <div className="absolute bottom-0 rounded-b-lg w-full bg-blue-500 text-white p-2 text-center">
-                {img.size}
-              </div>
+        {porcelineImages.map((product, index) => {
+          return (
+            <motion.div
+              key={index}
+              variants={itemVariants}
+              className="relative group "
+              whileHover={{ scale: 1.05 }}
+            >
+              <>
+                <img
+                  src={product.url}
+                  className="rounded-md object-cover h-[225px] md:h-[300px] w-[100%]"
+                  alt={product.name}
+                />
+                <div className="rounded-b-lg w-full bg-blue-500 text-white p-2 text-center">
+                  <p>{product.size}</p>
+                </div>
+              </>
             </motion.div>
-          </motion.div>
-        ))}
+          );
+        })}
       </motion.div>
     </div>
   );

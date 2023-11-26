@@ -13,7 +13,7 @@ const navLinks = [
   },
   {
     name: "Products",
-    href: "products",
+    href: "/products",
   },
   {
     name: "Catalog",
