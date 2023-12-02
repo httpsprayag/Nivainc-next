@@ -1,7 +1,8 @@
-"use client"
+"use client";
 import Link from "next/link";
 import React from "react";
 import { motion } from "framer-motion";
+import { MdOutlineProductionQuantityLimits } from "react-icons/md";
 const ProductList = [
   {
     name: "Adhesive Epoxy",
@@ -49,7 +50,12 @@ const ProductsPage = () => {
   return (
     <div className="pb-8">
       <div className="mt-4 px-4 mx-auto sm:w-4/5 xl:max-w-6xl">
-        <h1 className="md:text-center text-lg md:text-2xl my-8 text-blue-500">Our Products</h1>
+        <div className="flex items-center justify-start md:justify-center gap-3">
+          <MdOutlineProductionQuantityLimits className="text-3xl text-blue-400" />
+          <h1 className="md:text-center text-lg md:text-2xl my-8 text-blue-500">
+            Our Products
+          </h1>
+        </div>
         <motion.div
           className="mt-4 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
           variants={staggerVariants}
@@ -71,7 +77,9 @@ const ProductsPage = () => {
                     alt={product.name}
                   />
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 bg-black bg-opacity-50 group-hover:opacity-100 transition duration-300 ease-in-out">
-                    <p className="text-white text-lg font-bold">{product.name}</p>
+                    <p className="text-white text-lg font-bold">
+                      {product.name}
+                    </p>
                   </div>
                 </Link>
               </motion.div>

@@ -3,14 +3,18 @@
 import React, { useState } from "react";
 import { BlogModal } from "../BlogModal";
 
-export const BlogCard = ({ title, blogImage, date, content }) => {
+export const BlogCard = ({ title, blogImage, date, content, contentItems }) => {
   const [visible, setVisible] = useState(false);
-  const previewContent = content.split('\n').slice(0, 3).join('\n');
-
   return (
     <>
-      <BlogModal visible={visible} content={content} handleClose={() => setVisible(false)} />
-      <div className="max-w-md mx-auto bg-white rounded-md overflow-hidden shadow-xl shadow-gray-500">
+      <BlogModal
+        visible={visible}
+        content={content}
+        title={title}
+        contentList={contentItems}
+        handleClose={() => setVisible(false)}
+      />
+      <div className="max-w-md mx-auto bg-white rounded-md shadow-md shadow-blue-200 grid place-content-between">
         <img
           className="w-full h-40 object-cover object-center"
           src={blogImage}
@@ -18,7 +22,9 @@ export const BlogCard = ({ title, blogImage, date, content }) => {
         />
         <div className="p-4">
           <h2 className="text-2xl font-bold text-black mb-2">{title}</h2>
-          <p className="text-black">{previewContent} {content.length > 200 && '...'}</p>
+          <p className="text-black">
+            {content.length > 80 ? <>{content.slice(0, 121)}...</> : content}
+          </p>
         </div>
         <div className="flex justify-between items-center p-4">
           <p className="text-gray-600">{date}</p>
@@ -33,4 +39,3 @@ export const BlogCard = ({ title, blogImage, date, content }) => {
     </>
   );
 };
-

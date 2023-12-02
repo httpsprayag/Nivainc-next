@@ -1,11 +1,15 @@
-"use client"
+"use client";
 import React from "react";
 import { motion } from "framer-motion";
 import { itemVariants, staggerVariants } from "@/constants";
 
 const CeramicTiles = () => {
   const ceramicTiles = [
-    { name: "Ceramic tiles", url: "/assets/products/ceramicImg.jpeg", size: "300 x 600/600 x 600 , 300 x 450" },
+    {
+      name: "Ceramic tiles",
+      url: "/assets/products/ceramicImg.jpeg",
+      size: "300 x 600/600 x 600 , 300 x 450",
+    },
   ];
   return (
     <div className="h-screen px-4">

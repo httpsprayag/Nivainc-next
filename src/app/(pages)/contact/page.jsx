@@ -3,12 +3,45 @@ import React from "react";
 import { useFormik } from "formik";
 import { ProgressSpinner } from "primereact/progressspinner";
 import { Heading } from "@/components";
-import { FcContacts } from "react-icons/fc";
 import * as Yup from "yup";
-import { ImCircleRight } from "react-icons/im";
 import { MdContactPage } from "react-icons/md";
+import { Toast, ToastMessage } from "primereact/toast";
+
 
 const ContactUsPage = () => {
+  // const handleSubmit = async (
+  //   values: FormData
+  //   { setSubmitting, resetForm }
+  // ) => {
+  //   setSubmitting(true);
+  //   try {
+  //     const response = await axios.post("/api/mail", values);
+  //     console.log("response in frontend:", response?.data?.values);
+  //     resetForm();
+  //     showSuccess("Your Details Has been sent successfully.");
+  //   } catch (error) {
+  //     console.error("Error:", error);
+  //     showError("Something went wrong, please try again.");
+  //   }
+  //   setSubmitting(false);
+  // };
+
+  const showSuccess = (message) => {
+    toast.current?.show({
+      severity: "success",
+      summary: "Success",
+      detail: message,
+      life: 3000,
+    });
+  };
+  const showError = (errMsg) => {
+    toast.current?.show({
+      severity: "error",
+      summary: "Error",
+      detail: errMsg,
+      life: 3000,
+    });
+  };
   const formik = useFormik({
     initialValues: {
       name: "",
@@ -24,22 +57,28 @@ const ContactUsPage = () => {
         .required("Email is required"),
       query: Yup.string().required("Query is required"),
     }),
-    onSubmit: (values, { setSubmitting, isSubmitting }) => {
-      // Handle form submission logic here
-      setTimeout(() => {
-        setSubmitting(true);
-      }, 3000);
-      console.log({ values, isSubmitting });
+    onSubmit: async (values, { setSubmitting }) => {
+      setSubmitting(true);
+      try {
+        const response = await axios.post("/api/mail", values);
+        console.log("response in frontend:", response?.data?.values);
+        resetForm();
+        showSuccess("Your Details Has been sent successfully.");
+      } catch (error) {
+        console.error("Error:", error);
+        showError("Something went wrong, please try again.");
+      }
+      setSubmitting(false)
     },
   });
   return (
     <div className="mt-8 px-4 md:px-0 pb-4">
-      <div className="flex flex-col items-center gap-3 md:justify-center">
+      <div className="flex flex-col md:items-center gap-3 md:justify-center">
         <div className="flex items-center gap-3 text-blue-500">
           <MdContactPage className="text-3xl text-blue-400" />
           <Heading isCenter>Contact Us</Heading>
         </div>
-        <p className="max-w-3xl mx-auto px-4 text-lg md:text-2xl text-gray-500">
+        <p className="max-w-3xl mx-auto text-lg md:text-2xl text-gray-500">
           We would be most delighted to answer any of your questions or queries,
           thus feel free to contact us anytime! What is more, you can visit our
           showroom during our operating hours to check our products and have a
@@ -146,7 +185,7 @@ const ContactUsPage = () => {
           height="450"
           allowFullScreen
           loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
+          referrerPolicy="no-referrer-when-downgrade"
           className="absolute hidden md:flex w-[250px] right-[12%] top-0 bottom-0 h-full py-3"
         ></iframe>
       </div>
@@ -156,7 +195,7 @@ const ContactUsPage = () => {
         height="450"
         allowFullScreen
         loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
+        referrerPolicy="no-referrer-when-downgrade"
         className="md:hidden h-[230px] w-full py-3"
       />
     </div>
